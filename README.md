@@ -19,16 +19,14 @@ With hands-on experience in wine sales and inventory, I build data solutions tha
 ## 🛠️ Tools & Skills
 
 **Data Analysis:** Excel, Power Query, Pivot Tables
-
 **Data Handling:** Cleaning, Transformation, Structuring
-
 **Business Focus:** Sales Analysis, Inventory Tracking, Reporting Automation
 
 ---
 
 ## 📁 Featured Projects
 
-### 🍷 Wine Sales Analysis Dashboard
+### 🍷 Wine Sales Analysis Dashboard (ongoing)
 
 * Cleaned and transformed raw sales data using Power Query
 * Built an Excel dashboard to track performance and trends
@@ -38,7 +36,7 @@ With hands-on experience in wine sales and inventory, I build data solutions tha
 
 ---
 
-### 📦 Inventory Movement Tracker
+### 📦 Inventory Movement Tracker (ongoing)
 
 * Categorized stock into fast, slow, and non-moving items
 * Built a reporting system using Excel formulas and pivot tables
@@ -48,7 +46,7 @@ With hands-on experience in wine sales and inventory, I build data solutions tha
 
 ---
 
-### ⚙️ Data Cleaning Automation (Power Query)
+### ⚙️ Data Cleaning Automation (Power Query) (ongoing)
 
 * Automated repetitive data cleaning processes
 * Standardized raw operational datasets

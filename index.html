@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CarylCorpuz Portfolio</title>
+
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0b1220, #05070d);
+  color: #e5e7eb;
+  overflow-x: hidden;
+}
+
+/* FLOATING BACKGROUND GLOW */
+.bg-glow {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: rgba(56, 189, 248, 0.15);
+  filter: blur(120px);
+  border-radius: 50%;
+  top: -100px;
+  left: -150px;
+  z-index: 0;
+}
+
+.bg-glow2 {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: rgba(168, 85, 247, 0.15);
+  filter: blur(120px);
+  border-radius: 50%;
+  bottom: -120px;
+  right: -120px;
+  z-index: 0;
+}
+
+/* NAVBAR GLASS */
+nav {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1000px;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  z-index: 1000;
+}
+
+nav h1 {
+  font-size: 16px;
+  color: #38bdf8;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: #cbd5e1;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+.hero span {
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+/* SECTIONS */
+section {
+  position: relative;
+  z-index: 1;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* GLASS CARD */
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 20px;
+
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+
+.card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+/* HEADINGS */
+h2 {
+  margin-bottom: 10px;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+/* LISTS */
+ul {
+  padding-left: 20px;
+  color: #cbd5e1;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
+  position: relative;
+  z-index: 1;
+}
+
+/* SCROLL SMOOTH */
+html {
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+
+<!-- background glow -->
+<div class="bg-glow"></div>
+<div class="bg-glow2"></div>
+
+<!-- NAV -->
+<nav>
+  <h1>DASHMIND</h1>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glass">
+
+    <div class="logo-row">
+      <!-- SVG logo here -->
+      <h1>DashMind</h1>
+      <h2>Hi, I'm <span>Caryl Jane
+        Corpuz
+      </span></h2>
+    </div>
+
+    <h2>Turning Data Into Direction</h2>
+
+    <p>
+      Data Analyst • Power BI Builder • Front-End Explorer
+    </p>
+
+    <div class="cta">
+      <button>View Projects</button>
+      <button class="ghost">Contact Me</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="card">
+    <h2>About Me</h2>
+    <p>
+      I’m transitioning into tech with a focus on data analytics, Power BI,
+      and front-end development. I love building clean dashboards and turning
+      raw data into visual insights.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<div class="card">
+  <h3>Skills</h3>
+
+  <p><strong>Data & Analytics</strong></p>
+  <ul>
+    <li>SQL – Data querying, joins, aggregations</li>
+    <li>Power BI & Excel Dashboards</li>
+    <li>Data Cleaning & Reporting</li>
+    <li>Business Intelligence Thinking</li>
+
+  </ul>
+
+  <p><strong>Web & Tools</strong></p>
+  <ul>
+    <li>HTML / CSS / JavaScript</li>
+    <li>Git & GitHub (basic)</li>
+  </ul>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="card">
+    <h2>Projects</h2>
+    <ul>
+      <li>📊 Sales Performance Dashboard (Power BI)</li>
+      <li>🌐 Glassmorphism Portfolio Website</li>
+      <li>📈 Excel KPI Automation Report</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Email: carylcorpuz@gmail.com</p>
+    <p>LinkedIn: linkedin.com/in/carylcorpuz</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 carylcorpuz • Built with Glassmorphism UI
+</footer>
+
+<script>
+// smooth reveal animation
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
