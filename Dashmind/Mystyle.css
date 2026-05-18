@@ -1,0 +1,301 @@
+
+/* ========== BASE RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+    background: radial-gradient(circle at top, #0b1220, #05070d);
+  color: #e5e7eb;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+/* ========== BRAND GLOW SYSTEM ========== */
+.bg-glow,
+.bg-glow2 {
+  position: fixed;
+  filter: blur(120px);
+  border-radius: 50%;
+  z-index: 0;
+  will-change: transform;
+}
+
+.bg-glow {
+  width: 600px;
+  height: 600px;
+  background: rgba(56, 189, 248, 0.18);
+  top: -120px;
+  left: -150px;
+}
+
+.bg-glow2 {
+  width: 500px;
+  height: 500px;
+  background: rgba(168, 85, 247, 0.18);
+  bottom: -120px;
+  right: -120px;
+}
+
+/* ========== NAVBAR (GLASS + SCROLL EFFECT READY) ========== */
+nav {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 1050px;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 22px;
+
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+.card {
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+}
+
+nav h1 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #38bdf8;
+}
+
+.nav-links{
+  display:flex;
+  gap:18px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #cbd5e1;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
+  transform: translateY(-2px);
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  transition: 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav.scrolled{
+  background: rgba(5,7,13,0.85);
+  border-color: rgba(56,189,248,0.2);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+/* ========== HERO (PREMIUM CENTERPIECE) ========== */
+.hero {
+  position: relative;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 20px;
+  z-index: 1;
+
+  background: radial-gradient(circle at center, rgba(56,189,248,0.08), transparent 60%);
+}
+
+.hero p{
+  max-width:650px;
+}
+
+.hero-logo {
+   width:170px;
+    height:auto;
+    object-fit:contain;
+    margin-bottom:20px;
+    animation:float 4s ease-in-out infinite;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+}
+
+/* gradient name highlight */
+.hero span {
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+/* subtitle */
+.hero p {
+  margin-top: 12px;
+  color: #94a3b8;
+  letter-spacing: 1px;
+}
+
+/* ========== CTA BUTTONS (MORE PREMIUM FEEL) ========== */
+.cta {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+button {
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  border: none;
+  color: white;
+
+  padding: 12px 26px;
+  border-radius: 10px;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(168, 85, 247, 0.25);
+}
+
+button.ghost {
+  background: transparent;
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+}
+
+button:active{
+  transform:scale(0.98);
+}
+
+/* ========== SECTIONS ========== */
+section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+/* ========== GLASS CARDS (UPGRADED DEPTH) ========== */
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(22px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+
+  padding: 30px;
+  margin-bottom: 25px;
+
+  transform: translateY(40px) scale(0.98);
+  opacity: 0;
+
+  transition: all 0.7s ease;
+}
+
+.card.show {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+/* ========== TEXT ========== */
+p {
+  color: #cbd5e1;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+li:hover {
+  color: #38bdf8;
+  transform: translateX(4px);
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 50px 20px;
+  color: #64748b;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+footer a {
+  color: #38bdf8;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
