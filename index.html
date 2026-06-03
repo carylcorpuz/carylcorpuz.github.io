@@ -1,144 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>CarylCorpuz Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DashMind Caryl — Turning Chaos Into Direction</title>
 
-<link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Dancing+Script:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- background glow -->
-<div class="bg-glow"></div>
-<div class="bg-glow2"></div>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- NAV -->
-<nav>
-  <h1>DASHMIND</h1>
-  <div>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+  <!-- Floating Seeds Background -->
+  <div class="seeds-container" id="seedsContainer"></div>
 
-<!-- HERO -->
-<section class="hero">
-   <img src="Dashmind/dmlogo.png" alt="DashMind Logo" class="hero-logo" width="200">
-  <h2>Hi, I'm <span>Caryl Jane Corpuz</span></h2>
-  <p>
-    Data Analyst • Power BI Builder • Front-End Explorer
-  </p>
-
-  <div class="cta">
-    <button aria-label="View my projects">View Projects</button>
-    <button class="ghost" aria-label="Contact me">Contact Me</button>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="card">
-    <h2>About Me</h2>
-    <p>
-      I'm transitioning into tech with a focus on data analytics, Power BI,
-      and front-end development. I love building clean dashboards and turning
-      raw data into visual insights. Currently exploring the intersection of
-      design and data visualization.
-    </p>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="card">
-    <h2>Skills</h2>
-
-    <div class="skills-category">
-      <p><strong>Data & Analytics</strong></p>
-      <ul>
-        <li>SQL – Data querying, joins, aggregations</li>
-        <li>Power BI & Excel Dashboards</li>
-        <li>Data Cleaning & Reporting</li>
-        <li>Business Intelligence Thinking</li>
+  <!-- ════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════ -->
+  <nav id="mainNav">
+    <a href="#home" class="nav-logo">
+      <img src="DML.png" alt="DashMind Caryl Logo" class="logo-mark-img">
+      <div class="logo-wordmark">
+        <span class="logo-dash">DashMind</span>
+        <span class="logo-script">Caryl</span>
+      </div>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="toggle-wrap" title="Toggle light / dark mode">
+        <span class="toggle-label" id="toggleLabel">Dark</span>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode"></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════
+       HERO
+  ════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-content reveal">
+      <div class="hero-eyebrow">Data Analyst &nbsp;·&nbsp; Frontend Developer</div>
+      <h1 class="hero-name">
+        <span class="dash">DashMind</span>
+        <span class="script-name">Caryl</span>
+      </h1>
+      <p class="hero-tagline">
+        Turning Chaos Into Direction,<br>
+        Clarity Into Impact.
+      </p>
+      <p class="hero-sub">
+        Intuition <span>·</span> Precision <span>·</span> Transformation
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Get In Touch</a>
+      </div>
     </div>
 
-    <div class="skills-category">
-      <p><strong>Web & Tools</strong></p>
-      <ul>
-        <li>HTML / CSS / JavaScript</li>
-        <li>Git & GitHub</li>
-        <li>Figma (UI/UX basics)</li>
-      </ul>
+    <div class="hero-visual">
+      <img src="DMC.png" alt="DashMind Caryl" class="hero-logo-img">
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="card">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>📊 Sales Performance Dashboard</strong> – Power BI visualization with KPI tracking</li>
-      <li><strong>🌐 Glassmorphism Portfolio</strong> – Modern responsive design with smooth animations</li>
-      <li><strong>📈 Excel KPI Automation</strong> – Dynamic reporting with automated data refresh</li>
-    </ul>
-  </div>
-</section>
+  <!-- ════════════════════════════════════
+       ABOUT
+  ════════════════════════════════════ -->
+  <section class="section" id="about">
+    <div class="section-label">About Me</div>
+    <div class="about-grid">
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="card">
-    <h2>Contact</h2>
-    <p>
-      Email: <a href="mailto:carylcorpuz@gmail.com">carylcorpuz@gmail.com</a>
+      <div class="reveal">
+        <h2 class="section-title">From Raw Data<br>to <em>Real Decisions</em></h2>
+        <p class="about-text">
+          I'm Caryl — an aspiring data analyst and front-end developer with a passion
+          for finding the pattern inside the noise. Like a dandelion scattering seeds,
+          data points appear random until you trace the connections that give them meaning.
+        </p>
+        <p class="about-text">
+          My approach blends analytical rigor with a designer's eye. I don't just clean
+          data — I transform it into dashboards, reports, and interactive experiences
+          that make insight impossible to ignore.
+        </p>
+        <blockquote class="about-quote">
+          "Every messy spreadsheet is just a story waiting to be structured."
+        </blockquote>
+      </div>
+
+      <div class="reveal">
+        <div class="section-label">The Journey</div>
+        <div class="journey-row">
+          <div class="journey-step">
+            <span class="journey-icon">🌀</span>
+            <div class="journey-title">Chaos</div>
+            <div class="journey-sub">The Start</div>
+          </div>
+          <div class="journey-step">
+            <span class="journey-icon">🌱</span>
+            <div class="journey-title">Transform</div>
+            <div class="journey-sub">The Process</div>
+          </div>
+          <div class="journey-step">
+            <span class="journey-icon">🔭</span>
+            <div class="journey-title">Clarity</div>
+            <div class="journey-sub">The Result</div>
+          </div>
+          <div class="journey-step">
+            <span class="journey-icon">🎯</span>
+            <div class="journey-title">Direction</div>
+            <div class="journey-sub">The Impact</div>
+          </div>
+        </div>
+        <p class="about-text" style="margin-top: 1.75rem;">
+          Based in the Maldives, I work across data analysis and web development —
+          bridging the gap between complex information and beautiful, actionable presentation.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       SKILLS
+  ════════════════════════════════════ -->
+  <section class="section" id="skills" style="padding-top: 2rem;">
+    <div class="section-label">Technical Skills</div>
+    <h2 class="section-title reveal">Tools That <em>Power</em> the Work</h2>
+    <div class="skills-grid">
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">📊</div>
+        <div class="skill-name">Excel</div>
+        <div class="skill-desc">PivotTables, VLOOKUP, Power Query, advanced formulas & dashboards</div>
+        <div class="skill-bar"><div class="skill-fill" data-w="0.88"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay: 0.08s">
+        <div class="skill-icon">⚡</div>
+        <div class="skill-name">Power BI</div>
+        <div class="skill-desc">DAX measures, data modeling, interactive reports & visual storytelling</div>
+        <div class="skill-bar"><div class="skill-fill" data-w="0.80"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay: 0.16s">
+        <div class="skill-icon">🗄️</div>
+        <div class="skill-name">SQL</div>
+        <div class="skill-desc">Complex queries, joins, aggregations, subqueries & data transformation</div>
+        <div class="skill-bar"><div class="skill-fill" data-w="0.82"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay: 0.24s">
+        <div class="skill-icon">🌐</div>
+        <div class="skill-name">HTML &amp; CSS</div>
+        <div class="skill-desc">Semantic markup, Flexbox, Grid, responsive &amp; animated layouts</div>
+        <div class="skill-bar"><div class="skill-fill" data-w="0.90"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay: 0.32s">
+        <div class="skill-icon">✨</div>
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-desc">DOM manipulation, fetch API, Chart.js &amp; front-end interactivity</div>
+        <div class="skill-bar"><div class="skill-fill" data-w="0.76"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay: 0.40s">
+        <div class="skill-icon">📈</div>
+        <div class="skill-name">Data Viz</div>
+        <div class="skill-desc">Translating complex datasets into compelling visual narratives</div>
+        <div class="skill-bar"><div class="skill-fill" data-w="0.86"></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       PHILOSOPHY STRIP
+  ════════════════════════════════════ -->
+  <div class="philosophy-strip reveal">
+    <p class="philosophy-headline">
+      Chaos is just <em>direction</em> waiting to be found.<br>
+      Data is just <em>impact</em> waiting to be told.
     </p>
-    <p>
-      LinkedIn: <a href="https://linkedin.com/in/carylcorpuz" target="_blank" rel="noopener noreferrer">linkedin.com/in/carylcorpuz</a>
-    </p>
-    <p>
-      GitHub: <a href="https://github.com/carylcorpuz" target="_blank" rel="noopener noreferrer">github.com/carylcorpuz</a>
+    <div class="philosophy-divider">◇ ◇ ◇</div>
+    <p class="philosophy-credo">
+      Intuition <span>·</span> Precision <span>·</span> Transformation
     </p>
   </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  © 2026 <a href="https://github.com/carylcorpuz" target="_blank" rel="noopener noreferrer">carylcorpuz</a> • Built with Glassmorphism UI
-</footer>
+  <!-- ════════════════════════════════════
+       PROJECTS
+  ════════════════════════════════════ -->
+  <section class="section projects-section" id="projects">
+    <div class="section-label">Selected Work</div>
+    <h2 class="section-title reveal">Projects That <em>Transformed</em><br>Raw Complexity</h2>
+    <div class="projects-grid">
 
-<script>
-// Smooth reveal animation on scroll
-const cards = document.querySelectorAll('.card');
+      <div class="project-card reveal">
+        <span class="project-tag">SQL · Power BI</span>
+        <h3 class="project-title">Sales Performance Dashboard</h3>
+        <p class="project-desc">
+          Unified 3 years of scattered sales records into a single real-time Power BI dashboard.
+          Stakeholders moved from weekly guesswork to daily clarity on KPIs and regional performance.
+        </p>
+        <div class="project-tools">
+          <span class="tool-badge">SQL</span>
+          <span class="tool-badge">Power BI</span>
+          <span class="tool-badge">DAX</span>
+          <span class="tool-badge">Excel</span>
+        </div>
+        <a href="#" class="project-link">View Project</a>
+      </div>
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      // Optional: stop observing after animation
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 });
+      <div class="project-card reveal" style="transition-delay: 0.1s">
+        <span class="project-tag">HTML · CSS · JS</span>
+        <h3 class="project-title">Interactive Data Report Site</h3>
+        <p class="project-desc">
+          Converted static PDF findings into a fully responsive interactive web report with
+          animated charts, filterable tables, and scroll-driven storytelling.
+        </p>
+        <div class="project-tools">
+          <span class="tool-badge">HTML</span>
+          <span class="tool-badge">CSS</span>
+          <span class="tool-badge">JavaScript</span>
+          <span class="tool-badge">Chart.js</span>
+        </div>
+        <a href="#" class="project-link">View Project</a>
+      </div>
 
-cards.forEach(card => observer.observe(card));
+      <div class="project-card reveal" style="transition-delay: 0.2s">
+        <span class="project-tag">Excel · SQL</span>
+        <h3 class="project-title">Inventory Chaos → Clean Pipeline</h3>
+        <p class="project-desc">
+          Transformed a 10,000-row multi-sheet nightmare into a clean SQL database with an
+          Excel front-end, cutting reconciliation time from 3 hours to under 15 minutes.
+        </p>
+        <div class="project-tools">
+          <span class="tool-badge">Excel</span>
+          <span class="tool-badge">SQL</span>
+          <span class="tool-badge">Power Query</span>
+        </div>
+        <a href="#" class="project-link">View Project</a>
+      </div>
 
-// Smooth scroll for CTA buttons
-document.querySelectorAll('button').forEach(button => {
-  button.addEventListener('click', function() {
-    if (this.textContent.includes('Projects')) {
-      document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-    } else if (this.textContent.includes('Contact')) {
-      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-</script>
+      <div class="project-card reveal" style="transition-delay: 0.3s">
+        <span class="project-tag">Power BI · DAX</span>
+        <h3 class="project-title">Customer Retention Analysis</h3>
+        <p class="project-desc">
+          Identified key churn signals from behavioral data using DAX measures and cohort
+          analysis, enabling targeted retention strategies with measurable outcomes.
+        </p>
+        <div class="project-tools">
+          <span class="tool-badge">Power BI</span>
+          <span class="tool-badge">DAX</span>
+          <span class="tool-badge">Excel</span>
+        </div>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════ -->
+  <section class="section contact-section" id="contact">
+    <div class="section-label">Let's Connect</div>
+    <h2 class="section-title reveal">Ready to Turn Your<br><em>Data Into Direction?</em></h2>
+    <p class="about-text reveal" style="max-width: 480px; margin: 0 auto 0.5rem;">
+      Whether you have a dataset that needs clarity, a dashboard that needs elegance,
+      or a project that needs someone who speaks both data and design — I'd love to hear from you.
+    </p>
+    <div class="contact-links reveal">
+      <a href="mailto:hello@dashmindcaryl.com" class="contact-link">
+        <div class="contact-icon">✉</div>
+        <span class="contact-label">Email</span>
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="contact-link">
+        <div class="contact-icon" style="font-family:'DM Sans',sans-serif; font-size:.82rem; font-weight:500;">in</div>
+        <span class="contact-label">LinkedIn</span>
+      </a>
+      <a href="https://github.com" target="_blank" class="contact-link">
+        <div class="contact-icon" style="font-size:.82rem; font-family:'DM Sans',sans-serif;">GH</div>
+        <span class="contact-label">GitHub</span>
+      </a>
+      <a href="#" class="contact-link">
+        <div class="contact-icon">↓</div>
+        <span class="contact-label">Resume</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════ -->
+  <footer>
+    <div class="footer-brand">© 2025 <em>DashMind Caryl</em></div>
+    <div class="footer-motto">Turning chaos into direction. Clarity into impact.</div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 
 </body>
 </html>
